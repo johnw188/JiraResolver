@@ -1,0 +1,17 @@
+{
+  "manifest_version" : 2,
+  "name" : "JIRA resolver",
+  "version" : "1.0.2",
+  "description": "Tool for resolving Jira issues",
+  "content_scripts" : [{
+	"all_frames": true,
+	"js" : ["jquery-2.1.0.min.js", "jquery.easyModal.js", "background.js"],
+	"matches" : [ "https://jira.workday.com/browse/*" ],
+	"css": ["jiraResolver.css"]
+  }],
+  "permissions": [
+	"tabs",
+    "activeTab",
+	"*://*/*"
+  ]
+}
